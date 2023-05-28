@@ -1,0 +1,227 @@
+:root {
+  --bg-color: #eff6ff;
+  --font-color: #2a4a5c;
+  --fb-button-color: #255a9b;
+  --in-button-color: #0076b6;
+  --blue-color: #3698fb;
+  --gray-color1: #7b8a92;
+  --gray-color2: #96a5b1;
+  --gray-color3: #afafaf;
+  --white-color1: #eeeeee;
+  --white-color2: #ffffff;
+}
+@font-face {
+    font-family: Barlow;
+    src: url('font/Barlow-Light.otf');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: Barlow;
+    src: url('font/Barlow-Bold.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Barlow;
+    src: url('font/Barlow-Medium.otf');
+    font-weight: 500;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Barlow;
+  /* outline: 1px solid #f00 !important; */
+}
+input {
+  outline: none;
+  border: none;
+}
+
+.fb-button {
+  background-color: var(--fb-button-color);
+}
+.in-button {
+  background-color: var(--in-button-color);
+}
+body {
+  min-height: 100vh;
+  color: var(--font-color);
+}
+.background-image {
+  height: 100vh;
+  width: 50%;
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+.header {
+    font-weight: 500;
+}
+.sub-header {
+  color: var(--gray-color1);
+  font-size: 20px;
+}
+.separator {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.separator__line {
+  height: 2px;
+  width: 200px;
+  background-color: var(--white-color1);
+}
+
+.social {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap ;
+  justify-content: center;
+  align-items: center;
+}
+.social__button {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-left: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  
+}
+.social__button:hover {
+    filter: brightness(85%);
+}
+.social-icon {
+  width: 30px;
+  width: 30px;
+}
+body {
+  display: flex;
+  align-items:center;
+
+}
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-left: 50px;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: max-content;
+  flex-shrink:1;
+  flex-basis: content;
+  width: 100%;
+}
+.type-boxs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input-box {
+  border: 1px solid var(--white-color1);
+  padding-left: 5px;
+  padding-top: 5px;
+  height: 60px;
+  width: 300px;
+  color: var(--gray-color1);
+  display: flex;
+  flex-direction: column;
+}
+.input-box:has(input:focus) {
+    border-left-color: var(--blue-color);
+}
+.input-box input {
+  flex-grow: 1;
+}
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.radio-box__info {
+  border: 1px solid var(--gray-color3);
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  color: var(--gray-color3);
+  position: relative;
+}
+.radio-box {
+  font-size: 20px;
+  margin-top: 50px;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.radio-box__info:hover::after {
+    position: absolute;
+    top: calc(100%);
+    margin-top: 20px;
+    width: 200px;
+    font-size: 16px;
+    padding: 5px;
+    content: 'I am natutal person investing on my own behalf as a sole owner, joint tenant,or tenant in common';
+    box-shadow: 0px 0px 10px 2px  var(--gray-color3);
+    background-color: white;
+}
+.form__submit {
+    color: var(--white-color2);
+    width: 300px;
+    font-weight: bold;
+    height: 50px;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.form__submit:hover {
+    filter: brightness(85%);
+    cursor: pointer;
+}
+@media (max-width: 1250px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        width: 100%;
+
+    }
+    .background-image  {
+        height: 200px;
+        width: 100%;
+    }
+    .test {
+        width: 100%;
+    }
+}
